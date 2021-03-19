@@ -1,0 +1,30 @@
+primero abrir area de trabajo en >file>open directory>buscar directorio
+tambien se puede clickando dos veces en el fchero vhd en cuestion
+
+ficheros .do son ficheros de scripting en modelsim
+
+creamos un fichero script.do 
+____________________________________________________
+
+script.do>
+vlib work               ; cargar librerias de work
+vmap work work          ; cargar mapas de work
+
+vcom GATES.vhd          ; compilar fichero GATES.vhd
+
+add wave sim:/ginver/*
+
+run 10 ns               ; correr 10 ns
+
+force a 1               ; forzando 1 en la salida
+
+run 5 ns                ; correr 5 ns 
+____________________________________________________
+
+
+SIMULACION
+
+Para simular, doble click en el fichero entidad
+Se puede ejecutar el fichero script.do
+
+>> do script.do 
